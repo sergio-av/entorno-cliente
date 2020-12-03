@@ -34,7 +34,7 @@ const rest = ({ancho, largo, alto}= cuboResto).toString();
 
 //Facil: 1
 
-objeto ={
+objeto1 ={
     a:1,
     b:2
 }
@@ -43,7 +43,48 @@ function convertirObjetoAArray (obj){
     console.log(Object.entries(obj))
 }
 
-convertirObjetoAArray(objeto);
+
 
 //Facil: 2
+
+objeto2 = {
+    a:1,
+    b:2,
+    c:3
+}
+
+function objeto2Array (obj){
+    let array = [Object.keys(obj), Object.values(obj)];
+    console.log(array);
+}
+
+//Medio: 1
+objeto3 = {
+    z:"q",
+    w:"f"
+}
+
+function invertirClaveAValor(obj){
+    let invertido = Object.fromEntries(Object.entries(obj).map(x => x.reverse()))
+    console.log(invertido);
+  
+}
+
+
+//Medio: 2 
+
+const arrayObjetos = [{name:'Jhon', notes:[3,4,5]}]
+
+function notaMasAlta(arrayObj){
+    let expediente = arrayObj.map(function(alumno){
+        alumnoMaxNote ={
+            name:alumno.name,
+            TopNotes: Math.max(...alumno.notes,0)
+        }
+        return alumnoMaxNote;
+    })
+    
+    console.log(alumnoMaxNote)
+}
+
 
