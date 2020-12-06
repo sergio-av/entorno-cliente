@@ -76,15 +76,14 @@ function invertirClaveAValor(obj){
 const arrayObjetos = [{name:'Jhon', notes:[3,4,5]}]
 
 function notaMasAlta(arrayObj){
-    let expediente = arrayObj.map(function(alumno){
+    const expediente = arrayObj.map(function(alumno){
         alumnoMaxNote ={
             name:alumno.name,
-            TopNotes: Math.max(...alumno.notes,0)
+            topNote: Math.max(...alumno.notes,0)
         }
         return alumnoMaxNote;
     })
     
-    console.log(alumnoMaxNote)
+    console.log(expediente)
 }
-
-
+ 
